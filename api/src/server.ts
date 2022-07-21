@@ -1,16 +1,23 @@
 import errorHandler from 'errorhandler'
+import { Sequelize } from 'sequelize-typescript'
 
 import app from './app'
 import logger from './util/logger'
+import {
+  POSTGRES_DB,
+  POSTGRES_HOST,
+  POSTGRES_PASS,
+  POSTGRES_PORT,
+  POSTGRES_USER,
+} from './util/secrets'
 
-import { Sequelize } from 'sequelize-typescript'
 export const sequelize = new Sequelize({
   dialect: 'postgres',
-  username: process.env.POSTGRES_USER || '',
-  password: process.env.POSTGRES_PASS || '',
-  host: process.env.POSTGRES_HOST || '',
-  port: parseInt(process.env.POSTGRES_PORT || '5432'),
-  database: process.env.POSTGRES_DB || '',
+  username: POSTGRES_USER,
+  password: POSTGRES_PASS,
+  host: POSTGRES_HOST,
+  port: POSTGRES_PORT,
+  database: POSTGRES_DB,
   models: [__dirname + '/models'], // or [Player, Team],
 })
 
