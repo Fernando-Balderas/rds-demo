@@ -37,6 +37,7 @@ class Product extends Model<
   @Column({
     type: DataType.DECIMAL(8, 2),
     allowNull: false,
+    defaultValue: 0,
     validate: {
       min: 0,
     },
@@ -46,13 +47,25 @@ class Product extends Model<
   @Column({ type: DataType.STRING(1000), allowNull: true })
   declare image: string
 
-  @Column({ type: DataType.ARRAY(DataType.STRING(255)), allowNull: true })
+  @Column({
+    type: DataType.ARRAY(DataType.STRING(255)),
+    allowNull: true,
+    defaultValue: [],
+  })
   declare categories: string[]
 
-  @Column({ type: DataType.ARRAY(DataType.STRING(255)), allowNull: true })
+  @Column({
+    type: DataType.ARRAY(DataType.STRING(255)),
+    allowNull: true,
+    defaultValue: [],
+  })
   declare variants: string[]
 
-  @Column({ type: DataType.ARRAY(DataType.STRING(255)), allowNull: true })
+  @Column({
+    type: DataType.ARRAY(DataType.STRING(255)),
+    allowNull: true,
+    defaultValue: [],
+  })
   declare sizes: string[]
 
   @Column

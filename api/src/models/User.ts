@@ -1,12 +1,4 @@
-import {
-  Table,
-  Column,
-  Model,
-  CreatedAt,
-  UpdatedAt,
-  DeletedAt,
-  DataType,
-} from 'sequelize-typescript'
+import { Table, Column, Model, DataType } from 'sequelize-typescript'
 import { CreationOptional, Optional } from 'sequelize/types'
 import { Role, UserStatus } from '../types/types'
 

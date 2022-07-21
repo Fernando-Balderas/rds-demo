@@ -32,6 +32,7 @@ class Order extends Model<
   @Column({
     type: DataType.DECIMAL(8, 2),
     allowNull: false,
+    defaultValue: 0,
     validate: {
       min: 0,
     },

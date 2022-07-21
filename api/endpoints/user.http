@@ -2,16 +2,16 @@
 
 ### Get all
 
-GET http://localhost:3000/api/v1/users HTTP/1.1
+GET http://localhost:5000/api/v1/users HTTP/1.1
 Authorization: Barer {{token}}
 
 ### Get one by id
 
-GET http://localhost:3000/api/v1/users/1 HTTP/1.1
+GET http://localhost:5000/api/v1/users/1 HTTP/1.1
 
 ### Update profile
 
-PUT http://localhost:3000/api/v1/users/1 HTTP/1.1
+PUT http://localhost:5000/api/v1/users/1 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 ### Ban/Unban user
 
-PUT http://localhost:3000/api/v1/users/1 HTTP/1.1
+PUT http://localhost:5000/api/v1/users/1 HTTP/1.1
 Content-Type: application/json
 Authorization: Barer {{token}}
 
@@ -31,7 +31,7 @@ Authorization: Barer {{token}}
 
 ### Update password
 
-PUT http://localhost:3000/api/v1/users/1 HTTP/1.1
+PUT http://localhost:5000/api/v1/users/1 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 ### Create user
 
-POST http://localhost:3000/api/v1/users/signup HTTP/1.1
+POST http://localhost:5000/api/v1/users/signup HTTP/1.1
 Content-Type: application/json
 
 {
@@ -52,7 +52,7 @@ Content-Type: application/json
 
 ### Login user
 
-# POST http://localhost:3000/api/v1/users/login HTTP/1.1
+# POST http://localhost:5000/api/v1/users/login HTTP/1.1
 # Content-Type: application/json
 
 # {
@@ -62,4 +62,4 @@ Content-Type: application/json
 
 ### Delete one
 
-DELETE http://localhost:3000/api/v1/users/1 HTTP/1.1
+DELETE http://localhost:5000/api/v1/users/1 HTTP/1.1
