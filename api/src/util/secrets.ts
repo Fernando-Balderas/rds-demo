@@ -12,7 +12,7 @@ if (fs.existsSync('.env')) {
 
 export const ENVIRONMENT = process.env.NODE_ENV
 const prod = ENVIRONMENT === 'production' // Anything else is treated as 'dev'
-export const PORT = process.env.PORT || 3000
+export const PORT = process.env.PORT || 5001
 
 export const POSTGRES_USER = process.env.POSTGRES_USER || ''
 export const POSTGRES_PASS = process.env.POSTGRES_PASS || ''
